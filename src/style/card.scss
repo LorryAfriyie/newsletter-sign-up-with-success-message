@@ -1,13 +1,41 @@
 .newsletter-card {
-  background-color: hsl(0, 0%, 100%);
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
-  .card-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    display: grid;
 
-    .card-col {
+    .col-info {
+      padding: 1rem;
+
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        list-style-image: url("/images/icon-list.svg");
+      }
+    }
+
+    .col-img {
+      background-image: url("/images/illustration-sign-up-desktop.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: 40em) {
+  .newsletter-card {
+    .card {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
