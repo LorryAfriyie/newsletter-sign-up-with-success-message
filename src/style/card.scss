@@ -1,37 +1,50 @@
 .newsletter-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-  .card {
+  .container {
     background-color: hsl(0, 0%, 100%);
-    border-radius: 10px;
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 1rem;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 100%;
 
-    .col-info {
-      padding: 1rem;
+    .subscribe-form {
+      padding: 3rem;
 
       h1 {
-        font-size: 3rem;
         text-align: center;
-        margin-bottom: 0;
+        font-weight: 700;
+        font-size: 3.25rem;
       }
 
-      .sub-text {
-        ul {
-          list-style-type: none;
-          list-style-image: url("/images/icon-list.svg");
+      .form-control {
+        position: relative;
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: 700;
+        }
+
+        input {
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          margin-bottom: 1rem;
         }
       }
-    }
-  }
-}
 
-@media (min-width: 40em) {
-  .newsletter-card {
-    .card {
-      grid-template-columns: repeat(2, 1fr);
+      button {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }
