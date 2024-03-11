@@ -3,19 +3,27 @@
     background-color: hsl(0, 0%, 100%);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    padding: 1rem;
+    gap: 2rem;
+    padding: 1.5rem;
     border-radius: 20px;
-    max-width: 800px;
+    max-width: 900px;
     width: 100%;
 
     .subscribe-form {
-      padding: 3rem;
+      padding: 1.5rem;
+      margin: auto;
+      display: block;
 
       h1 {
         text-align: center;
         font-weight: 700;
-        font-size: 3.25rem;
+        font-size: 3.75rem;
+      }
+
+      ul {
+        li {
+          margin: 25px 0 25px 0;
+        }
       }
 
       .form-control {
@@ -29,22 +37,29 @@
 
         input {
           width: 100%;
-          padding: 10px;
-          border-radius: 5px;
+          padding: 15px;
+          border-radius: 8px;
+          border: 1px solid hsl(231, 7%, 60%);
           margin-bottom: 1rem;
         }
       }
 
       button {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
+        width: 96%;
+        padding: 15px;
+        border-radius: 8px;
+        font-weight: 700;
+        color: hsl(0, 0%, 100%);
+        background: hsl(235, 18%, 26%);
+        border: none;
       }
     }
 
     img {
       width: 100%;
       height: auto;
+      margin: auto;
+      display: block;
     }
   }
 }
