@@ -32,10 +32,12 @@ export const NewsletterSubCard = () => {
           <button type="submit">Subscribe to monthly newsletter</button>
         </form>
 
-        <img
+        <div className="img"></div>
+
+        {/* <img
           src="/images/illustration-sign-up-desktop.svg"
           alt="illustration-sign-up-desktop.svg"
-        />
+        /> */}
       </div>
     </div>
   );

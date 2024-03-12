@@ -2,7 +2,7 @@
   .container {
     background-color: hsl(0, 0%, 100%);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
     gap: 2rem;
     padding: 1.5rem;
     border-radius: 20px;
@@ -13,22 +13,37 @@
       padding: 1.5rem;
       margin: auto;
       display: block;
+      order: 2;
 
       h1 {
         text-align: center;
         font-weight: 700;
-        font-size: 3.75rem;
+        font-size: 3.65rem;
       }
 
       ul {
+        list-style: none;
+        padding: 0;
         li {
           margin: 25px 0 25px 0;
+          padding-left: 40px;
+          position: relative;
+        }
+
+        li:before {
+          background-image: url("/images/icon-list.svg");
+          background-size: cover;
+          content: "";
+          height: 20px;
+          left: 0;
+          position: absolute;
+          top: 1px;
+          width: 20px;
         }
       }
 
       .form-control {
         position: relative;
-
         label {
           display: block;
           margin-bottom: 5px;
@@ -36,9 +51,9 @@
         }
 
         input {
-          width: 100%;
           padding: 15px;
           border-radius: 8px;
+          width: 100%;
           border: 1px solid hsl(231, 7%, 60%);
           margin-bottom: 1rem;
         }
@@ -55,11 +70,43 @@
       }
     }
 
+    .img:before {
+      content: url("/images/illustration-sign-up-mobile.svg");
+    }
+
+    .img {
+      order: 1;
+      display: grid;
+      place-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
     img {
       width: 100%;
       height: auto;
       margin: auto;
       display: block;
+    }
+  }
+}
+
+@media (min-width: 40em) {
+  .newsletter-card {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+
+      .subscribe-form {
+        order: 1;
+      }
+
+      .img {
+        order: 2;
+      }
+
+      .img:before {
+        content: url("/images/illustration-sign-up-desktop.svg");
+      }
     }
   }
 }
