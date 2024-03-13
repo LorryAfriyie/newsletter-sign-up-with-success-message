@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 export const NewsletterSubCard = () => {
   const listItems = [
     { id: 1, message: "Product discovery and building what matters" },
@@ -10,7 +12,9 @@ export const NewsletterSubCard = () => {
       <div className="container">
         <form className="subscribe-form">
           <h1>Stay updated!</h1>
+
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
           <ul>
             {listItems.map((x) => {
               return <li key={x.id}>{x.message}</li>;
@@ -21,6 +25,7 @@ export const NewsletterSubCard = () => {
             <label htmlFor="email">
               <small>Email address</small>
             </label>
+
             <input
               type="email"
               name="email"
@@ -29,15 +34,17 @@ export const NewsletterSubCard = () => {
             />
           </div>
 
-          <button type="submit">Subscribe to monthly newsletter</button>
+          <div className="form-control">
+            <button type="submit">Subscribe to monthly newsletter</button>
+          </div>
         </form>
 
-        <div className="img"></div>
+        {/* <div className="img"></div> */}
 
-        {/* <img
+        <img
           src="/images/illustration-sign-up-desktop.svg"
           alt="illustration-sign-up-desktop.svg"
-        /> */}
+        />
       </div>
     </div>
   );
