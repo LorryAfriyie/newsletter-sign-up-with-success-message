@@ -7,11 +7,24 @@ export const NewsletterSubCard = () => {
     { id: 3, message: "And much more!" },
   ];
 
+  const emailAddress = useRef(null);
+
+  function test(e) {
+    e.preventDefault();
+    emailAddress.current.classList.add("error");
+    emailAddress.current.style.background = "hsl(5, 10%, 94%)";
+    emailAddress.current.style.color = "hsl(4, 100%, 67%)";
+  }
+
+  useEffect(() => {
+    //document.getElementById("email").style.background = "blue";
+  }, []);
+
   return (
     <div className="newsletter-card">
       <div className="container">
-        <form className="subscribe-form">
-          <h1>Stay updated!</h1>
+        <form className="subscribe-form" onSubmit={test}>
+          <h1 id="header">Stay updated!</h1>
 
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
@@ -21,7 +34,7 @@ export const NewsletterSubCard = () => {
             })}
           </ul>
 
-          <div className="form-control">
+          <div className="form-control" id="form">
             <label htmlFor="email">
               <small>Email address</small>
             </label>
@@ -30,6 +43,7 @@ export const NewsletterSubCard = () => {
               type="email"
               name="email"
               id="email"
+              ref={emailAddress}
               placeholder="Email@company.com"
             />
           </div>

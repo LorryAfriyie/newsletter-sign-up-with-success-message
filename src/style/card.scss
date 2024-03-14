@@ -59,10 +59,14 @@
           border: 1px solid hsl(231, 7%, 60%);
           margin-bottom: 1rem;
         }
+
+        input:focus {
+          border: 1px solid hsl(231, 7%, 60%);
+        }
       }
 
       .error {
-        border: 1px solid hsl(4, 100%, 67%);
+        border: 1px solid hsl(4, 100%, 67%) !important;
       }
 
       button {
@@ -73,6 +77,10 @@
         color: hsl(0, 0%, 100%);
         background: hsl(235, 18%, 26%);
         border: none;
+      }
+
+      button:hover {
+        background: hsl(4, 100%, 67%);
       }
     }
 
