@@ -8,6 +8,7 @@ export const NewsletterSubCard = () => {
   ];
 
   const emailAddress = useRef(null);
+  const form = useRef(null);
 
   function test(e) {
     e.preventDefault();
@@ -22,7 +23,7 @@ export const NewsletterSubCard = () => {
 
   return (
     <div className="newsletter-card">
-      <div className="container">
+      <div className="container" ref={form}>
         <form className="subscribe-form" onSubmit={test}>
           <h1 id="header">Stay updated!</h1>
 
@@ -60,6 +61,7 @@ export const NewsletterSubCard = () => {
           alt="illustration-sign-up-desktop.svg"
         />
       </div>
+      
     </div>
   );
 };
