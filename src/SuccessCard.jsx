@@ -1,6 +1,14 @@
-export const SuccessCard = () => {
+import { forwardRef, useEffect } from "react";
+
+// eslint-disable-next-line react/display-name
+export const SuccessCard = forwardRef(({ email, isEmail }, ref) => {
+  useEffect(() => {
+    if (!email) ref.current.style.display = "none";
+
+    if (isEmail && email) ref.current.style.display = "block";
+  }, [email, ref, isEmail]);
   return (
-    <div className="success-card">
+    <div className="success-card" ref={ref}>
       <div className="container">
         <img src="/images/icon-success.svg" alt="icon-success.svg" />
 
@@ -8,9 +16,9 @@ export const SuccessCard = () => {
 
         <p>
           <small>
-            A confirmation email has been sent to{" "}
-            <strong>lawrenceafriyie@gmail.com</strong>. Please open it and click
-            the button inside to confirm your subscription.
+            A confirmation email has been sent to <strong>{email}</strong>.
+            Please open it and click the button inside to confirm your
+            subscription.
           </small>
         </p>
 
@@ -18,4 +26,4 @@ export const SuccessCard = () => {
       </div>
     </div>
   );
-};
+});

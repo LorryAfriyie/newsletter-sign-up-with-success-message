@@ -80,11 +80,7 @@
       }
 
       button:hover {
-        background: linear-gradient(
-          45deg,
-          hsl(4, 67%, 56%),
-          hsl(4, 100%, 67%)
-        );
+        background: linear-gradient(45deg, hsl(4, 67%, 56%), hsl(4, 100%, 67%));
         box-shadow: 0 10px 20px -5px hsl(4, 100%, 67%);
       }
     }
