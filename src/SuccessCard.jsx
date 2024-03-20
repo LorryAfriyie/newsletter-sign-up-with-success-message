@@ -7,6 +7,11 @@ export const SuccessCard = forwardRef(({ email, isEmail }, ref) => {
 
     if (isEmail && email) ref.current.style.display = "block";
   }, [email, ref, isEmail]);
+
+  function redirect() {
+    window.location.href = "/";
+  }
+
   return (
     <div className="success-card" ref={ref}>
       <div className="container">
@@ -22,7 +27,7 @@ export const SuccessCard = forwardRef(({ email, isEmail }, ref) => {
           </small>
         </p>
 
-        <button>Dismiss message</button>
+        <button onClick={redirect}>Dismiss message</button>
       </div>
     </div>
   );

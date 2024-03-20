@@ -25,3 +25,9 @@ body {
     color: hsl(4, 100%, 67%);
   }
 }
+
+@media (max-width: 40em) {
+  body {
+    background-color: hsl(0, 0%, 100%);
+  }
+}

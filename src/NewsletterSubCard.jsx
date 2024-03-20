@@ -17,11 +17,14 @@ export const NewsletterSubCard = () => {
   const form = useRef(null);
   const displaySuccess = useRef(null);
 
-  function test(e) {
+  function submitEmail(e) {
     e.preventDefault();
-    emailAddress.current.classList.add("error");
-    emailAddress.current.style.background = "hsl(5, 10%, 94%)";
-    emailAddress.current.style.color = "hsl(4, 100%, 67%)";
+
+    if (emailAddress.current.value.trim() === "") {
+      emailAddress.current.classList.add("error");
+      emailAddress.current.style.background = "hsl(5, 10%, 94%)";
+      emailAddress.current.style.color = "hsl(4, 100%, 67%)";
+    }
 
     if (email) {
       form.current.style.display = "none";
@@ -33,7 +36,7 @@ export const NewsletterSubCard = () => {
     <>
       <div className="newsletter-card">
         <div className="container" ref={form}>
-          <form className="subscribe-form" onSubmit={test}>
+          <form className="subscribe-form" onSubmit={submitEmail}>
             <h1 id="header">Stay updated!</h1>
 
             <p>Join 60,000+ product managers receiving monthly updates on:</p>
