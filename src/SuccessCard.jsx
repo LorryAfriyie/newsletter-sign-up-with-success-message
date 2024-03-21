@@ -2,11 +2,11 @@ import { forwardRef, useEffect } from "react";
 
 // eslint-disable-next-line react/display-name
 export const SuccessCard = forwardRef(({ email, isEmail }, ref) => {
-  useEffect(() => {
+  /* useEffect(() => {
     if (!email) ref.current.style.display = "none";
 
     if (isEmail && email) ref.current.style.display = "block";
-  }, [email, ref, isEmail]);
+  }, [email, ref, isEmail]); */
 
   function redirect() {
     window.location.href = "/";

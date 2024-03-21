@@ -1,10 +1,12 @@
 import { NewsletterSubCard } from "./NewsletterSubCard";
+import { SuccessCard } from "./SuccessCard";
 import "./style/main.scss";
 
 function App() {
   return (
     <>
-      <NewsletterSubCard />
+      {/* <NewsletterSubCard /> */}
+      <SuccessCard />
 
       <div className="attribution">
         Challenge by
