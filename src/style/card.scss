@@ -2,7 +2,6 @@
   .container {
     background-color: hsl(0, 0%, 100%);
     display: grid;
-
     gap: 1rem;
     padding: 1.5rem;
     border-radius: 20px;
@@ -25,6 +24,7 @@
       ul {
         list-style: none;
         padding: 0;
+
         li {
           margin: 25px 0 25px 0;
           padding-left: 40px;
@@ -50,6 +50,12 @@
           display: block;
           margin-bottom: 5px;
           font-weight: 700;
+
+          .error-label {
+            float: right;
+            color: hsl(4, 100%, 67%);
+            display: none;
+          }
         }
 
         input {

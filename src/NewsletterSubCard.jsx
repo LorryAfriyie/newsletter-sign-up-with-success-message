@@ -16,14 +16,16 @@ export const NewsletterSubCard = () => {
   const emailAddress = useRef(null);
   const form = useRef(null);
   const displaySuccess = useRef(null);
+  const errorLabelMessage = useRef(null);
 
   function submitEmail(e) {
     e.preventDefault();
 
     if (emailAddress.current.value.trim() === "") {
       emailAddress.current.classList.add("error");
-      emailAddress.current.style.background = "hsl(5, 10%, 94%)";
+      emailAddress.current.style.background = "rgb(255, 232, 230)";
       emailAddress.current.style.color = "hsl(4, 100%, 67%)";
+      errorLabelMessage.current.style.display = "block";
     }
 
     if (email) {
@@ -50,6 +52,9 @@ export const NewsletterSubCard = () => {
             <div className="form-control" id="form">
               <label htmlFor="email">
                 <small>Email address</small>
+                <small className="error-label" ref={errorLabelMessage}>
+                  Valid email required
+                </small>
               </label>
 
               <input
