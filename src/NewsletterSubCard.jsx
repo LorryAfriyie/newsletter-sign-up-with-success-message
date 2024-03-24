@@ -72,8 +72,6 @@ export const NewsletterSubCard = () => {
             </div>
           </form>
 
-          {/* <div className="img"></div> */}
-
           <img
             src="/images/illustration-sign-up-desktop.svg"
             alt="illustration-sign-up-desktop.svg"
