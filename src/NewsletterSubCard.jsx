@@ -36,47 +36,45 @@ export const NewsletterSubCard = () => {
 
   return (
     <>
-      <div className="newsletter-card">
-        <div className="container" ref={form}>
-          <form className="subscribe-form" onSubmit={submitEmail}>
-            <h1 id="header">Stay updated!</h1>
+      <div className="newsletter-card" ref={form}>
+        <form className="subscribe-form" onSubmit={submitEmail}>
+          <h1 id="header">Stay updated!</h1>
 
-            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
-            <ul>
-              {listItems.map((x) => {
-                return <li key={x.id}>{x.message}</li>;
-              })}
-            </ul>
+          <ul>
+            {listItems.map((x) => {
+              return <li key={x.id}>{x.message}</li>;
+            })}
+          </ul>
 
-            <div className="form-control" id="form">
-              <label htmlFor="email">
-                <small>Email address</small>
-                <small className="error-label" ref={errorLabelMessage}>
-                  Valid email required
-                </small>
-              </label>
+          <div className="form-control" id="form">
+            <label htmlFor="email">
+              <small>Email address</small>
+              <small className="error-label" ref={errorLabelMessage}>
+                Valid email required
+              </small>
+            </label>
 
-              <input
-                type="email"
-                name="email"
-                id="email"
-                ref={emailAddress}
-                placeholder="Email@company.com"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              ref={emailAddress}
+              placeholder="Email@company.com"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-            <div className="form-control">
-              <button type="submit">Subscribe to monthly newsletter</button>
-            </div>
-          </form>
+          <div className="form-control">
+            <button type="submit">Subscribe to monthly newsletter</button>
+          </div>
+        </form>
 
-          <img
-            src="/images/illustration-sign-up-desktop.svg"
-            alt="illustration-sign-up-desktop.svg"
-          />
-        </div>
+        <img
+          src="/images/illustration-sign-up-desktop.svg"
+          alt="illustration sign up"
+        />
       </div>
 
       <SuccessCard email={email} ref={displaySuccess} isEmail={isEmail} />

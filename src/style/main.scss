@@ -11,8 +11,7 @@
 body {
   background-color: hsl(235, 18%, 26%);
   font-size: 16px;
-  display: grid;
-  place-content: center;
+
   min-height: 100vh;
 }
 
@@ -26,7 +25,19 @@ body {
   }
 }
 
+@media (min-width: 41em) {
+  body {
+    display: grid;
+    place-content: center;
+  }
+}
+
 @media (max-width: 40em) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   body {
     background-color: hsl(0, 0%, 100%);
   }

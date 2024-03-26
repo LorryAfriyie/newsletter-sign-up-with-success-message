@@ -1,124 +1,120 @@
 .newsletter-card {
-  .container {
-    background-color: hsl(0, 0%, 100%);
-    display: grid;
-    gap: 1rem;
-    padding: 1.5rem;
-    border-radius: 20px;
-    max-width: 900px;
-    width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  display: grid;
+  gap: 1rem;
 
-    .subscribe-form {
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+
+  .subscribe-form {
+    padding: 1.75rem;
+    margin: auto;
+    display: block;
+    order: 2;
+
+    h1 {
+      text-align: justify;
+      font-size: 2.5rem;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: none;
       padding: 0;
-      margin: auto;
-      display: block;
-      order: 2;
 
-      h1 {
-        text-align: justify;
-        font-size: 2.5rem;
-        margin-bottom: 0;
-        margin-top: 0;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-
-        li {
-          margin: 25px 0 25px 0;
-          padding-left: 40px;
-          position: relative;
-        }
-
-        li:before {
-          background-image: url("/images/icon-list.svg");
-          background-size: cover;
-          content: "";
-          height: 20px;
-          left: 0;
-          position: absolute;
-          top: 1px;
-          width: 20px;
-        }
-      }
-
-      .form-control {
+      li {
+        margin: 25px 0 25px 0;
+        padding-left: 40px;
         position: relative;
+      }
 
-        label {
-          display: block;
-          margin-bottom: 5px;
-          font-weight: 700;
+      li:before {
+        background-image: url("/images/icon-list.svg");
+        background-size: cover;
+        content: "";
+        height: 20px;
+        left: 0;
+        position: absolute;
+        top: 1px;
+        width: 20px;
+      }
+    }
 
-          .error-label {
-            float: right;
-            color: hsl(4, 100%, 67%);
-            display: none;
-          }
-        }
+    .form-control {
+      position: relative;
 
-        input {
-          padding: 15px;
-          border-radius: 8px;
-          width: 100%;
-          border: 1px solid hsl(231, 7%, 60%);
-          margin-bottom: 1rem;
-        }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 700;
 
-        input:focus {
-          border: 1px solid hsl(231, 7%, 60%);
+        .error-label {
+          float: right;
+          color: hsl(4, 100%, 67%);
+          display: none;
         }
       }
 
-      .error {
-        border: 1px solid hsl(4, 100%, 67%) !important;
-      }
-
-      button {
-        width: 100%;
+      input {
         padding: 15px;
         border-radius: 8px;
-        font-weight: 700;
-        color: hsl(0, 0%, 100%);
-        background: hsl(235, 18%, 26%);
-        border: none;
+        width: 100%;
+        border: 1px solid hsl(231, 7%, 60%);
+        margin-bottom: 1rem;
       }
 
-      button:hover {
-        background: linear-gradient(45deg, hsl(4, 67%, 56%), hsl(4, 100%, 67%));
-        box-shadow: 0 10px 20px -5px hsl(4, 100%, 67%);
+      input:focus {
+        border: 1px solid hsl(231, 7%, 60%);
       }
     }
 
-    img {
-      order: 1;
+    .error {
+      border: 1px solid hsl(4, 100%, 67%) !important;
+    }
+
+    button {
       width: 100%;
-      margin: auto;
-      display: block;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: 700;
+      color: hsl(0, 0%, 100%);
+      background: hsl(235, 18%, 26%);
+      border: none;
     }
+
+    button:hover {
+      background: linear-gradient(45deg, hsl(4, 67%, 56%), hsl(4, 100%, 67%));
+      box-shadow: 0 10px 20px -5px hsl(4, 100%, 67%);
+    }
+  }
+
+  img {
+    order: 1;
+    width: 100%;
+    margin: auto;
+    display: block;
   }
 }
 
 @media (min-width: 40em) {
   .newsletter-card {
-    .container {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
 
-      .subscribe-form {
-        order: 1;
-        padding: 1.75rem;
+    .subscribe-form {
+      order: 1;
 
-        h1 {
-          text-align: justify;
-          font-weight: 700;
-          font-size: 3.5rem;
-        }
+      h1 {
+        text-align: justify;
+        font-weight: 700;
+        font-size: 3.5rem;
       }
+    }
 
-      img {
-        order: 2;
-      }
+    img {
+      order: 2;
     }
   }
 }
