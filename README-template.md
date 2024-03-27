@@ -60,14 +60,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - [Vite.js](https://vitejs.dev/) - Frontend Tooling
 
 ### What I learned
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
 The code piece below is an example of what I learned when it comes to replacing the normal bullet points of an unordered list item with an image, the code below was written in sass.
+
 ```scss
 ul {
   list-style: none;
@@ -91,12 +85,16 @@ ul {
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
+The following JavaScript code below shows how to test whether an email is in the correct format.
 
+```js
+function emailIsValid(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+console.log(emailIsValid("law@gmail.com"));
+console.log(emailIsValid("law#gmail.com"));
+```
 
 ### Useful resources
 
@@ -105,6 +103,8 @@ const proudOfThisFunc = () => {
 - [CSS Order property](https://www.w3schools.com/cssref/css3_pr_order.php) - I was able to learn about the use of the order property on flexible elements to enable the change of positions of html elements on a webpage through the use of css.
 
 - [Adding an image into a div using pseudo elements](https://stackoverflow.com/questions/10829675/how-to-put-an-image-in-div-with-css) - This post had an answer that solved an issue of being able to effectively add an image into a div using pseudo elements and not using the semantic way of adding an image through the img selector.
+
+- [Email validation and testing using JavaScript](https://ui.dev/validate-email-address-javascript) - This post contains useful information with regards to being able to validate the format of an email address as well as being able to test whether the string passed into the function is in a valid email format.
 
 ## Author
 

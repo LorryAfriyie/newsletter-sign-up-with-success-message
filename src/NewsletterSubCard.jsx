@@ -4,6 +4,7 @@ import { SuccessCard } from "./SuccessCard";
 export const NewsletterSubCard = () => {
   const [email, setEmail] = useState("");
   const [isEmail, setIsEmail] = useState(false);
+  const [emailRegex] = useState(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
 
   // Website service list
   const listItems = [
@@ -32,12 +33,19 @@ export const NewsletterSubCard = () => {
       form.current.style.display = "none";
       setIsEmail(true);
     }
+
+    if (emailAddress.current.value.trim() !== emailRegex) {
+      emailAddress.current.classList.add("error");
+      emailAddress.current.style.background = "rgb(255, 232, 230)";
+      emailAddress.current.style.color = "hsl(4, 100%, 67%)";
+      errorLabelMessage.current.style.display = "block";
+    }
   }
 
   return (
     <>
       <div className="newsletter-card" ref={form}>
-        <form className="subscribe-form" onSubmit={submitEmail}>
+        <form className="subscribe-form" onSubmit={submitEmail} noValidate>
           <h1 id="header">Stay updated!</h1>
 
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -71,10 +79,11 @@ export const NewsletterSubCard = () => {
           </div>
         </form>
 
-        <img
+        <div className="img"></div>
+        {/* <img
           src="/images/illustration-sign-up-desktop.svg"
           alt="illustration sign up"
-        />
+        /> */}
       </div>
 
       <SuccessCard email={email} ref={displaySuccess} isEmail={isEmail} />

@@ -31,16 +31,19 @@
 @media (max-width: 40em) {
   .success-card {
     height: 100vh;
-    display: grid;
-    place-content: center;
-    position: relative;
+
     .container {
-      padding: 1rem;
+      padding: 1.25rem;
+      display: grid;
+      height: 100%;
+      place-content: center;
+      gap: 2.5rem;
+      position: relative;
 
       button {
-        position: absolute;
+        /* position: absolute;
         bottom: 0;
-        left: 0;
+        left: 0; */
       }
     }
   }

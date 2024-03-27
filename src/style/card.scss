@@ -90,6 +90,16 @@
     }
   }
 
+  .img {
+    order: 1;
+    margin: auto;
+    display: block;
+  }
+
+  .img::after {
+    content: url("/images/illustration-sign-up-mobile.svg");
+  }
+
   img {
     order: 1;
     width: 100%;
@@ -113,8 +123,12 @@
       }
     }
 
-    img {
+    .img {
       order: 2;
+    }
+
+    .img::after {
+      content: url("/images/illustration-sign-up-desktop.svg");
     }
   }
 }
