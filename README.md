@@ -53,8 +53,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [newsletter-sign-up-with-success-message repository link](https://github.com/LorryAfriyie/newsletter-sign-up-with-success-message)
+- Live Site URL: [newsletter-sign-up-with-success-message live website](https://lorryafriyie.github.io/newsletter-sign-up-with-success-message/)
 
 ## My process
 
@@ -128,5 +128,4 @@ console.log(emailIsValid("law#gmail.com"));
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@LorryAfriyie](https://www.frontendmentor.io/profile/LorryAfriyie)
