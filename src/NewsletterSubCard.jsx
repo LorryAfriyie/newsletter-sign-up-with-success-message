@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { SuccessCard } from "./SuccessCard";
 
 export const NewsletterSubCard = () => {
